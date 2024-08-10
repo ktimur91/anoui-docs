@@ -1,0 +1,81 @@
+.btn {
+  @apply rounded-md border-0 outline-0;
+  @apply flex items-center gap-3;
+  @apply px-3 h-8;
+  @apply text-gray-600 fill-gray-600;
+  @apply hover:bg-gray-200 hover:text-gray-600 hover:fill-gray-600;
+  @apply active:bg-gray-200;
+  @apply dark:text-white dark:fill-white;
+  @apply dark:hover:bg-zinc-700 dark:hover:text-white dark:hover:fill-white;
+  @apply dark:active:bg-zinc-800;
+
+  /* States */
+  &.active {
+    @apply bg-gray-300;
+    @apply dark:bg-gray-900;
+  }
+
+  /* Sizes */
+  &.xs {
+    @apply text-xs;
+    @apply h-6 px-1;
+  }
+  &.sm {
+    @apply text-sm;
+    @apply h-7 px-2;
+  }
+  &.md {
+    @apply h-8 px-3;
+  }
+  &.lg {
+    @apply h-10 px-4;
+  }
+  &.xl {
+    @apply text-xl;
+    @apply h-12 px-5;
+  }
+
+  /* Modificators */
+  &.cube {
+    @apply p-0;
+    @apply justify-center items-center;
+  }
+  &.xs.cube {
+    @apply h-6 w-6;
+  }
+  &.sm.cube {
+    @apply h-7 w-7;
+  }
+  &.md.cube {
+    @apply h-8 w-8;
+  }
+  &.lg.cube {
+    @apply h-10 w-10;
+  }
+  &.xl.cube {
+    @apply h-12 w-12;
+  }
+  
+  /* Colors */
+  &.primary {
+    @apply border-0 bg-primary-500 text-white fill-white;
+    @apply hover:bg-primary-400;
+    @apply active:bg-primary-500;
+  }
+  &.link {
+    @apply border-0 bg-transparent text-slate-700 fill-slate-700;
+
+    @apply dark:text-slate-400;
+    @apply dark:active:bg-blue-600;
+
+    @apply hover:bg-blue-500 hover:text-white;
+    @apply active:bg-blue-100;
+
+    /* States */
+    &.active {
+      @apply bg-gray-500 text-white;
+      @apply pointer-events-none;
+    }
+  }
+}
+

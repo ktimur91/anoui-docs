@@ -1,0 +1,13 @@
+/* Base */
+@import 'tailwindcss/base';
+@import './resets.scss';
+
+/* Components */
+@import 'tailwindcss/components';
+@import './components/main.scss';
+@import './elements/main.scss';
+
+/* Utilities */
+@import 'tailwindcss/utilities';
+
+@config '../../../../tailwind.config.js';

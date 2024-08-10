@@ -1,0 +1,66 @@
+{
+  "base": {
+    "search": "Поиск",
+    "copy": "Копировать",
+    "install": "Установка",
+    "config": "Конфигурация",
+    "configs": "Конфигурации",
+    "import": "Импорт",
+    "example": "Пример",
+    "examples": "Примеры",
+    "settings": "Настройки",
+    "props": "Свойства",
+    "slots": "Слоты",
+    "methods": "Методы",
+    "start": "Начало",
+    "components": "Компоненты",
+    "styles": "Стили"
+  },
+  "nav": {
+    "section": {
+      "main": "Главное",
+      "start": "Начало",
+      "baseComponents": "Базовые компоненты",
+      "formComponents": "Компоненты форм"
+    },
+    "main": {
+      "home": "Что такое Ano UI",
+      "changelog": "История изменений"
+    },
+    "start": {
+      "install": "Установка",
+      "styles": "Стили",
+      "examples": "Примеры",
+      "designComponents": "Дизайн компонентов"
+    },
+    "baseComponents": {
+      "alert": "Alert",
+      "dropdown": "Dropdown",
+      "modal": "Modal",
+      "toast": "Toast",
+      "icon": "Icon"
+    },
+    "formComponents": {
+      "input": "Input",
+      "textarea": "Textarea",
+      "select": "Select",
+      "autocomplete": "Autocomplete",
+      "checkbox": "Checkbox",
+      "radio": "Radio"
+    }
+  },
+  "soc": {
+    "github": "Gihub репозиторий",
+    "figma": "UI kit для Figma",
+    "telegram": "Давайте общаться"
+  },
+  "page-title": {
+    "base": {
+      "main": "Еще одна библиотека UI компонентов",
+      "gettingStarted": "Начало работы",
+      "config": "Настройки",
+      "docs": "Документация",
+      "icons": "Иконки"
+    }
+  }
+}
