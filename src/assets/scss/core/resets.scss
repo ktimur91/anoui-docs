@@ -1,6 +1,25 @@
 @layer base {
+  html.dark {
+    .tippy {
+      &-box {
+        background-color: #FFF;
+      }
+      &-content {
+        color: #000;
+      }
+      &-arrow {
+        color: #FFF;
+      }
+    }
+  }
   // html {
   //   font-family: "Fira Code", monospace;
   //   font-optical-sizing: auto;
   // }
+
+  a {
+    @apply underline;
+    @apply hover:no-underline;
+    @apply text-primary-500 dark:text-primary-300;
+  }
 }

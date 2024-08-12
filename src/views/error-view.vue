@@ -24,7 +24,7 @@ import { AnoIcon } from '@ano-vue3/ui/components'
     <div
       class="flex flex-col items-center justify-center gap-1 text-center m-auto p-10 rounded bg-zinc-100 dark:bg-zinc-800"
     >
-      <AnoIcon pack="bi" icon="exclamation-triangle-fill" size="50" color="fill-red-500" />
+      <AnoIcon pack="bi" icon="exclamation-triangle-fill" size="50" color="fill-gray-400" />
       <h1 class="text-3xl font-bold mt-3">Ошибка 404</h1>
       <div class="text-lg text-zinc-400">Похоже такой страницы не существует</div>
 

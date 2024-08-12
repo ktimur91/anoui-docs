@@ -9,7 +9,7 @@ import { BaseSidebar } from '@/components'
 <template>
   <div class="grid grid-cols-[280px_1fr] min-h-screen max-w-[1400px] mx-auto">
     <BaseSidebar />
-    <main class="bg-white dark:bg-zinc-950 p-8">
+    <main class="bg-white dark:bg-zinc-950 py-8 px-12">
       <RouterView />
     </main>
   </div>

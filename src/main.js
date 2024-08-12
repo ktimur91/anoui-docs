@@ -19,12 +19,12 @@ import router from './router'
 // Icons
 // import outline from './assets/sprites/outline.svg'
 // import solid from './assets/sprites/solid.svg'
-// import fileTypes from './assets/sprites/fileTypes.svg'
+import fileTypes from './assets/sprites/fileTypes.svg'
 import mdi from './assets/sprites/mdi.svg'
 import bi from './assets/sprites/bi.svg'
 
 // Config
-addIconPacks({ mdi, bi })
+addIconPacks({ fileTypes, mdi, bi })
 
 const app = createApp(App)
 

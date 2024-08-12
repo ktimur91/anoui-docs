@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 // Local
-import base from './modules/base'
+import main from './modules/main'
 import docs from './modules/docs'
 
 // Routing
@@ -15,16 +15,24 @@ const router = createRouter({
       //   middleware: [isAccess, isAuth]
       // },
       component: () => import('@/layouts/default-layout.vue'),
-      children: [...base]
+      children: [...main]
     },
     {
       path: '/docs',
       // meta: {
-      //   middleware: [isGuest]
+      //   middleware: [isAccess, isAuth]
       // },
-      component: () => import('@/layouts/docs-layout.vue'),
+      component: () => import('@/layouts/default-layout.vue'),
       children: [...docs]
     },
+    // {
+    //   path: '/docs',
+    //   // meta: {
+    //   //   middleware: [isGuest]
+    //   // },
+    //   component: () => import('@/layouts/docs-layout.vue'),
+    //   children: [...docs]
+    // },
     {
       path: '/redirect',
       component: () => import('@/views/redirect-view.vue')

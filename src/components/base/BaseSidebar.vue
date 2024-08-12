@@ -2,14 +2,17 @@
 // NPM
 import { useI18n } from 'vue-i18n'
 import { AnoIcon } from '@ano-vue3/ui/components'
+import { useRouter } from 'vue-router'
 import { ref } from 'vue'
 
 // Data:imports
 const i18n = useI18n()
+const router = useRouter()
 
 // Data:base
 const isDarkTheme = ref(false)
 const currentLang = ref(i18n.locale.value)
+const currentNav = ref([])
 
 // Created
 init()
@@ -17,6 +20,7 @@ init()
 // Methods
 function init() {
   isDarkTheme.value = localStorage.getItem('isDarkTheme')
+  currentNav.value = router.options.routes.find((el) => el.path === '/docs').children
 }
 function toggleLang() {
   const lang = currentLang.value === 'ru' ? 'en' : 'ru'
@@ -39,7 +43,7 @@ function toggleTheme() {
     <div class="h-[130px] grid gap-5 p-5">
       <div class="flex items-center justify-between">
         <!-- Logo -->
-        <RouterLink to="/" class="flex items-center gap-1">
+        <RouterLink to="/" class="flex items-center gap-1 no-underline">
           <img src="/img/logo.svg" alt="Ano ui" class="h-5" />
           <b class="text-2xl text-secondary-800 dark:text-gray-100">ano</b>
         </RouterLink>
@@ -82,22 +86,22 @@ function toggleTheme() {
           </nav>
         </section>
 
-        <section class="grid gap-2 self-start">
-          <small class="text-sm text-gray-400 dark:text-gray-500 px-4">{{ $t('nav.section.start') }}</small>
+        <section v-for="navItem of currentNav" :key="navItem.path" class="grid gap-2 self-start">
+          <!-- <small class="text-sm text-gray-400 dark:text-gray-500 px-4">{{ $t('nav.section.start') }}</small> -->
+          <small class="text-sm text-gray-400 dark:text-gray-500 px-4">{{ $t(navItem.meta.sectionName) }}</small>
           <nav class="base-nav grid gap-2">
-            <RouterLink to="/install" class="base-nav__item">
-              {{ $t('nav.start.install') }}
-            </RouterLink>
-            <RouterLink to="/styles" class="base-nav__item">
-              {{ $t('nav.start.styles') }}
-            </RouterLink>
-            <RouterLink to="/examples" class="base-nav__item">
-              {{ $t('nav.start.examples') }}
+            <RouterLink
+              v-for="childrenItem of navItem.children"
+              :key="`${navItem.path}-${childrenItem.path}`"
+              :to="`/docs/${navItem.path}/${childrenItem.path}`"
+              class="base-nav__item"
+            >
+              {{ $t(childrenItem.meta.title) }}
             </RouterLink>
           </nav>
         </section>
 
-        <section class="grid gap-2 self-start">
+        <!-- <section class="grid gap-2 self-start">
           <small class="text-sm text-gray-400 dark:text-gray-500 px-4">{{ $t('nav.section.baseComponents') }}</small>
           <nav class="base-nav grid gap-2">
             <RouterLink to="/docs/base/alert" class="base-nav__item">
@@ -140,7 +144,7 @@ function toggleTheme() {
               {{ $t('nav.formComponents.radio') }}
             </RouterLink>
           </nav>
-        </section>
+        </section> -->
       </div>
 
       <!-- Social buttons -->
@@ -186,7 +190,7 @@ function toggleTheme() {
 
 .base-nav {
   &__item {
-    @apply px-4 py-1 rounded-md flex items-center gap-2;
+    @apply px-4 py-1 rounded-md flex items-center gap-2 no-underline text-zinc-800 dark:text-zinc-100;
 
     @apply hover:bg-white;
     @apply active:bg-gray-50;

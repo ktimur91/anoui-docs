@@ -2,6 +2,7 @@
   "base": {
     "search": "Search",
     "copy": "Copy",
+    "copied": "Success 👍",
     "install": "Install",
     "config": "Config",
     "configs": "Configs",
@@ -30,8 +31,7 @@
     "start": {
       "install": "Install",
       "styles": "Styles",
-      "examples": "Examples",
-      "designComponents": "Design of components"
+      "icons": "Icons"
     },
     "baseComponents": {
       "alert": "Alert",
@@ -53,14 +53,5 @@
     "github": "Gihub repo",
     "figma": "Figma ui kit",
     "telegram": "Let's chat"
-  },
-  "page-title": {
-    "base": {
-      "main": "Yet another UI kit",
-      "gettingStarted": "Getting started",
-      "config": "Configuration",
-      "docs": "Documentation",
-      "icons": "Icons"
-    }
   }
 }

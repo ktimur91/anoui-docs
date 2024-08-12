@@ -9,7 +9,7 @@ export default [
   {
     path: 'changelog',
     meta: {
-      title: 'page-title.base.main'
+      title: 'page-title.base.changelog'
     },
     component: () => import(/* webpackChunkName: "group-base" */ '@/views/base/main-view.vue')
   }
