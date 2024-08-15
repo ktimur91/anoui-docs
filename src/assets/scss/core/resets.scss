@@ -17,9 +17,9 @@
   //   font-optical-sizing: auto;
   // }
 
-  a {
-    @apply underline;
-    @apply hover:no-underline;
+  a.alink {
+    @apply shadow-[0_1px_0_0] shadow-primary-100/70;
     @apply text-primary-500 dark:text-primary-300;
+    @apply hover:shadow-primary-400 hover:shadow-[0_2px_0_0] dark:hover:shadow-primary-300;
   }
 }

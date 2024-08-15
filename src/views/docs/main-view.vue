@@ -48,10 +48,12 @@ function scrollToTop() {
 
     <!-- Footer -->
     <div class="grid grid-cols-3 gap-5 items-center mt-10 h-[60px] sticky bottom-0 z-10 bg-white dark:bg-zinc-950">
-      <RouterLink :to="prevNext.prev.path" class="btn lg base justify-center">
-        <AnoIcon pack="bi" icon="arrow-left" size="18" color="fill-current" />
-        {{ $t(prevNext.prev.name) }}
-      </RouterLink>
+      <div class="grid">
+        <RouterLink v-if="prevNext.prev" :to="prevNext.prev.path" class="btn lg base justify-center">
+          <AnoIcon pack="bi" icon="arrow-left" size="18" color="fill-current" />
+          {{ $t(prevNext.prev.name) }}
+        </RouterLink>
+      </div>
 
       <div class="flex items-center justify-center">
         <button v-if="hasToTopBtn" class="btn lg base justify-center cube" @click="scrollToTop()">
@@ -59,10 +61,12 @@ function scrollToTop() {
         </button>
       </div>
 
-      <RouterLink :to="prevNext.next.path" class="btn lg base justify-center">
-        {{ $t(prevNext.next.name) }}
-        <AnoIcon pack="bi" icon="arrow-right" size="18" color="fill-current" />
-      </RouterLink>
+      <div class="grid">
+        <RouterLink v-if="prevNext.next" :to="prevNext.next.path" class="btn lg base justify-center">
+          {{ $t(prevNext.next.name) }}
+          <AnoIcon pack="bi" icon="arrow-right" size="18" color="fill-current" />
+        </RouterLink>
+      </div>
     </div>
   </div>
 </template>

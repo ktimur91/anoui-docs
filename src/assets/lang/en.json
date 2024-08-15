@@ -3,19 +3,9 @@
     "search": "Search",
     "copy": "Copy",
     "copied": "Success 👍",
-    "install": "Install",
-    "config": "Config",
-    "configs": "Configs",
-    "import": "Import",
-    "example": "Example",
-    "examples": "Examples",
-    "settings": "Settings",
     "props": "Props",
     "slots": "Slots",
-    "methods": "Methods",
-    "start": "Start",
-    "components": "Components",
-    "styles": "Styles"
+    "methods": "Methods"
   },
   "nav": {
     "section": {

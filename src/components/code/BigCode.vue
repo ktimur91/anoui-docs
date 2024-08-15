@@ -60,7 +60,7 @@ function copyCode() {
     />
 
     <!-- Preview -->
-    <div v-if="currentData.type === 'preview'" class="p-20">
+    <div v-if="currentData.type === 'preview'" class="p-5">
       <component :is="currentData.component" />
     </div>
 
