@@ -38,7 +38,7 @@ function toggleTheme() {
 </script>
 
 <template>
-  <aside class="base-sidebar bg-zinc-100 dark:bg-zinc-900 grid grid-rows-[auto_1fr]">
+  <aside class="base-sidebar bg-zinc-100 dark:bg-zinc-900 grid grid-rows-[auto_1fr] h-screen sticky top-0 z-0">
     <!-- Head -->
     <div class="h-[130px] grid gap-5 p-5">
       <div class="flex items-center justify-between">

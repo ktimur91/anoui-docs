@@ -1,5 +1,5 @@
 // NPM
-import * as components from '../src/components'
+import * as components from '@ano-vue3/ui/components'
 import { createApp } from 'vue'
 
 // Local

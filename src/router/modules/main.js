@@ -2,14 +2,14 @@ export default [
   {
     path: '',
     meta: {
-      title: 'page-title.base.main'
+      title: 'nav.main.home'
     },
     component: () => import(/* webpackChunkName: "group-base" */ '@/views/base/main-view.vue')
   },
   {
     path: 'changelog',
     meta: {
-      title: 'page-title.base.changelog'
+      title: 'nav.main.changelog'
     },
     component: () => import(/* webpackChunkName: "group-base" */ '@/views/base/main-view.vue')
   }

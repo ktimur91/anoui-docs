@@ -7,30 +7,30 @@
 import { BigCode, SmallCode } from '@/components'
 
 // Local:examples
-import ExampleApp from './example/ExampleApp.vue?raw'
-import ExampleMain from './example/ExampleMain.js?raw'
+// import ExampleApp from './example/ExampleApp.vue?raw'
+// import ExampleMain from './example/ExampleMain.js?raw'
 
 // Data:base
-const tabs = [
-  {
-    text: 'your-component.vue',
-    value: 'appvue',
-    type: 'code',
-    language: 'javascript',
-    icon: 'vue',
-    iconPack: 'fileTypes',
-    component: ExampleApp
-  },
-  {
-    text: 'global-import.js',
-    value: 'mainjs',
-    type: 'code',
-    language: 'javascript',
-    icon: 'js',
-    iconPack: 'fileTypes',
-    component: ExampleMain
-  }
-]
+// const tabs = [
+//   {
+//     text: 'your-component.vue',
+//     value: 'appvue',
+//     type: 'code',
+//     language: 'javascript',
+//     icon: 'vue',
+//     iconPack: 'fileTypes',
+//     component: ExampleApp
+//   },
+//   {
+//     text: 'global-import.js',
+//     value: 'mainjs',
+//     type: 'code',
+//     language: 'javascript',
+//     icon: 'js',
+//     iconPack: 'fileTypes',
+//     component: ExampleMain
+//   }
+// ]
 </script>
 
 <template>
@@ -55,6 +55,6 @@ const tabs = [
       </ol>
     </div>
 
-    <BigCode :tabs="tabs" />
+    <!-- <BigCode :tabs="tabs" /> -->
   </div>
 </template>

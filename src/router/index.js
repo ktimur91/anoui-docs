@@ -11,28 +11,14 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      // meta: {
-      //   middleware: [isAccess, isAuth]
-      // },
       component: () => import('@/layouts/default-layout.vue'),
       children: [...main]
     },
     {
       path: '/docs',
-      // meta: {
-      //   middleware: [isAccess, isAuth]
-      // },
       component: () => import('@/layouts/default-layout.vue'),
       children: [...docs]
     },
-    // {
-    //   path: '/docs',
-    //   // meta: {
-    //   //   middleware: [isGuest]
-    //   // },
-    //   component: () => import('@/layouts/docs-layout.vue'),
-    //   children: [...docs]
-    // },
     {
       path: '/redirect',
       component: () => import('@/views/redirect-view.vue')

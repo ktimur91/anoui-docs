@@ -9,21 +9,51 @@ export default [
       {
         path: 'install',
         meta: {
-          title: 'nav.start.install'
+          title: 'nav.start.install',
+          prevNext: {
+            prev: {
+              name: 'nav.main.changelog',
+              path: '/changelog'
+            },
+            next: {
+              name: 'nav.start.styles',
+              path: '/docs/start/styles'
+            }
+          }
         },
         component: () => import(/* webpackChunkName: "group-docs-start" */ '@/views/docs/start/install-view.vue')
       },
       {
         path: 'styles',
         meta: {
-          title: 'nav.start.styles'
+          title: 'nav.start.styles',
+          prevNext: {
+            prev: {
+              name: 'nav.start.install',
+              path: '/docs/start/install'
+            },
+            next: {
+              name: 'nav.start.icons',
+              path: '/docs/start/icons'
+            }
+          }
         },
-        component: () => import(/* webpackChunkName: "group-docs-start" */ '@/views/docs/start/install-view.vue')
+        component: () => import(/* webpackChunkName: "group-docs-start" */ '@/views/docs/start/styles-view.vue')
       },
       {
         path: 'icons',
         meta: {
-          title: 'nav.start.icons'
+          title: 'nav.start.icons',
+          prevNext: {
+            prev: {
+              name: 'nav.start.styles',
+              path: '/docs/start/styles'
+            },
+            next: {
+              name: 'nav.baseComponents.modal',
+              path: '/docs/base-components/modal'
+            }
+          }
         },
         component: () => import(/* webpackChunkName: "group-docs-start" */ '@/views/docs/start/install-view.vue')
       }
@@ -39,7 +69,17 @@ export default [
       {
         path: 'modal',
         meta: {
-          title: 'nav.baseComponents.modal'
+          title: 'nav.baseComponents.modal',
+          prevNext: {
+            prev: {
+              name: 'nav.start.icons',
+              path: '/docs/start/icons'
+            },
+            next: {
+              name: 'nav.baseComponents.modal',
+              path: '/docs/base-components/modal'
+            }
+          }
         },
         component: () =>
           import(/* webpackChunkName: "group-docs-base-components" */ '@/views/docs/base-components/modal-view.vue')
