@@ -87,7 +87,6 @@ function toggleTheme() {
         </section>
 
         <section v-for="navItem of currentNav" :key="navItem.path" class="grid gap-2 self-start">
-          <!-- <small class="text-sm text-gray-400 dark:text-gray-500 px-4">{{ $t('nav.section.start') }}</small> -->
           <small class="text-sm text-gray-400 dark:text-gray-500 px-4">{{ $t(navItem.meta.sectionName) }}</small>
           <nav class="base-nav grid gap-2">
             <RouterLink
@@ -100,51 +99,6 @@ function toggleTheme() {
             </RouterLink>
           </nav>
         </section>
-
-        <!-- <section class="grid gap-2 self-start">
-          <small class="text-sm text-gray-400 dark:text-gray-500 px-4">{{ $t('nav.section.baseComponents') }}</small>
-          <nav class="base-nav grid gap-2">
-            <RouterLink to="/docs/base/alert" class="base-nav__item">
-              {{ $t('nav.baseComponents.alert') }}
-            </RouterLink>
-            <RouterLink to="/docs/base/dropdown" class="base-nav__item">
-              {{ $t('nav.baseComponents.dropdown') }}
-            </RouterLink>
-            <RouterLink to="/docs/base/modal" class="base-nav__item">
-              {{ $t('nav.baseComponents.modal') }}
-            </RouterLink>
-            <RouterLink to="/docs/base/toast" class="base-nav__item">
-              {{ $t('nav.baseComponents.toast') }}
-            </RouterLink>
-            <RouterLink to="/docs/base/icon" class="base-nav__item">
-              {{ $t('nav.baseComponents.icon') }}
-            </RouterLink>
-          </nav>
-        </section>
-
-        <section class="grid gap-2 self-start">
-          <small class="text-sm text-gray-400 dark:text-gray-500 px-4">{{ $t('nav.section.formComponents') }}</small>
-          <nav class="base-nav grid gap-2">
-            <RouterLink to="/docs/form/input" class="base-nav__item">
-              {{ $t('nav.formComponents.input') }}
-            </RouterLink>
-            <RouterLink to="/docs/form/textarea" class="base-nav__item">
-              {{ $t('nav.formComponents.textarea') }}
-            </RouterLink>
-            <RouterLink to="/docs/form/select" class="base-nav__item">
-              {{ $t('nav.formComponents.select') }}
-            </RouterLink>
-            <RouterLink to="/docs/form/autocomplete" class="base-nav__item">
-              {{ $t('nav.formComponents.autocomplete') }}
-            </RouterLink>
-            <RouterLink to="/docs/form/checkbox" class="base-nav__item">
-              {{ $t('nav.formComponents.checkbox') }}
-            </RouterLink>
-            <RouterLink to="/docs/form/radio" class="base-nav__item">
-              {{ $t('nav.formComponents.radio') }}
-            </RouterLink>
-          </nav>
-        </section> -->
       </div>
 
       <!-- Social buttons -->

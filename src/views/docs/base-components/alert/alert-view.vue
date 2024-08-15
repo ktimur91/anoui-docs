@@ -31,12 +31,6 @@ const tabs = [
 <template>
   <div class="grid gap-5">
     <div>Базовое использование</div>
-    <div class="flex items-center gap-5">
-      <button class="btn md base">Usage</button>
-      <button class="btn md base">Props</button>
-      <button class="btn md base">Events</button>
-      <button class="btn md base">Methods</button>
-    </div>
     <BigCode :tabs="tabs" />
   </div>
 </template>

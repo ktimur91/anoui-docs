@@ -5,7 +5,8 @@
     "copied": "Success 👍",
     "props": "Props",
     "slots": "Slots",
-    "methods": "Methods"
+    "methods": "Methods",
+    "onThisPage": "On this page"
   },
   "nav": {
     "section": {
