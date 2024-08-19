@@ -6,7 +6,8 @@
     "props": "Свойства",
     "slots": "Слоты",
     "methods": "Методы",
-    "onThisPage": "На этой странице"
+    "onThisPage": "На этой странице",
+    "totop": "На верх"
   },
   "nav": {
     "section": {

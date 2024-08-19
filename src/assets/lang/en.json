@@ -6,7 +6,8 @@
     "props": "Props",
     "slots": "Slots",
     "methods": "Methods",
-    "onThisPage": "On this page"
+    "onThisPage": "On this page",
+    "totop": "To top"
   },
   "nav": {
     "section": {

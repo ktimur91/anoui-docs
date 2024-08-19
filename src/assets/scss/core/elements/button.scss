@@ -58,12 +58,20 @@
   
   /* Colors */
   &.primary {
-    @apply border-0 bg-primary-500 text-white fill-white;
+    @apply border-0 bg-primary-500 text-white fill-current;
     @apply hover:bg-primary-400;
     @apply active:bg-primary-500;
   }
+  &.gray {
+    @apply border-0 bg-zinc-100 text-gray-500 fill-current;
+    @apply dark:bg-zinc-900 dark:text-gray-400;
+    @apply hover:bg-zinc-200;
+    @apply active:bg-zinc-100;
+    @apply dark:hover:bg-zinc-800;
+    @apply dark:active:bg-zinc-900;
+  }
   &.link {
-    @apply border-0 bg-transparent text-slate-700 fill-slate-700;
+    @apply border-0 bg-transparent text-slate-700 fill-current;
 
     @apply dark:text-slate-400;
     @apply dark:active:bg-blue-600;
