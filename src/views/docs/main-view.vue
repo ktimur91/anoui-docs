@@ -20,7 +20,7 @@ const prevNext = computed(() => route.meta.prevNext)
 watch(
   () => route.fullPath,
   () => {
-    scrollToTop()
+    scrollToElement()
     nextTick(() => {
       getAncorList()
     })
@@ -37,10 +37,17 @@ onMounted(() => {
 })
 
 // Methods
-function scrollToTop(elementName) {
+function scrollToElement(elementName) {
   const element = document.querySelector(elementName)
-  const y = element ? element.getBoundingClientRect().top + window.scrollY : 0
+  const y = element ? element.getBoundingClientRect().top + window.scrollY - 20 : 0
   window.scrollTo({ top: y, behavior: 'smooth' })
+
+  if (element) {
+    element.classList.add('active')
+    setTimeout(() => {
+      element.classList.remove('active')
+    }, 1000)
+  }
 }
 function getAncorList() {
   ancorList.value = []
@@ -69,10 +76,12 @@ function getAncorList() {
   <div class="grid gap-10 grid-cols-[1fr_auto]">
     <!-- Content -->
     <div class="grid grid-rows-[1fr_auto] gap-10">
-      <RouterView id="content" class="grid gap-5 self-start" />
+      <div id="content" class="grid gap-12 self-start description">
+        <RouterView />
+      </div>
 
       <!-- Footer -->
-      <div class="flex justify-between gap-5 items-center h-[60px] sticky bottom-0 z-10 bg-white dark:bg-zinc-950">
+      <div class="flex justify-between gap-5 items-center h-[60px] sticky bottom-0 z-10 bg-white dark:bg-zinc-900">
         <div class="grid">
           <RouterLink
             v-if="prevNext.prev"
@@ -109,7 +118,7 @@ function getAncorList() {
               v-for="ancor of ancorList"
               :key="ancor.id"
               class="btn md base text-left grid"
-              @click="scrollToTop(`#ancor[data-id=${ancor.id}]`)"
+              @click="scrollToElement(`#ancor[data-id=${ancor.id}]`)"
             >
               <span class="overflow-ellipsis whitespace-nowrap overflow-hidden">{{ ancor.name }}</span>
             </button>
@@ -118,7 +127,7 @@ function getAncorList() {
       </div>
 
       <div v-if="hasToTopBtn" class="content-nav__bottom">
-        <button class="btn lg gray justify-center" @click="scrollToTop()">
+        <button class="btn lg outline justify-center" @click="scrollToElement()">
           <AnoIcon pack="bi" icon="arrow-up" size="18" color="fill-current" /> {{ $t('base.totop') }}
         </button>
       </div>

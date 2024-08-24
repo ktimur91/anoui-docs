@@ -38,7 +38,7 @@ function toggleTheme() {
 </script>
 
 <template>
-  <aside class="base-sidebar bg-zinc-100 dark:bg-zinc-900 grid grid-rows-[auto_1fr] h-screen sticky top-0 z-0">
+  <aside class="base-sidebar bg-zinc-100 dark:bg-zinc-950 grid grid-rows-[auto_1fr] h-screen sticky top-0 z-0">
     <!-- Head -->
     <div class="h-[130px] grid gap-5 p-5">
       <div class="flex items-center justify-between">
@@ -127,7 +127,7 @@ function toggleTheme() {
   &__social {
     @apply grid grid-cols-3 items-center gap-3 p-5 sticky bottom-0 z-10;
     @apply bg-gradient-to-t from-zinc-100 via-zinc-100 to-transparent;
-    @apply dark:bg-gradient-to-t dark:from-zinc-900 dark:via-zinc-900 dark:to-transparent;
+    @apply dark:bg-gradient-to-t dark:from-zinc-950 dark:via-zinc-950 dark:to-transparent;
   }
 }
 
